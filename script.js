@@ -28,14 +28,16 @@ const player2Name = document.getElementById('player2Name');
 resetTimerBtn.addEventListener('click', resetTimer);
 startButton.addEventListener("click", function() {
 
-    if(startButton.textContent == "Start"){
-        startButton.innerHTML = "Stop";
+    if(startButton.getElementsByTagName("p")[0].innerHTML == "Start"){
+      startButton.getElementsByTagName("p")[0].innerHTML = "Stop";
+      startButton.getElementsByTagName("img")[0].src = "assets/stop.png";
         startTimer();
         return;
     }
 
-    if(startButton.textContent == "Stop"){
-        startButton.innerHTML = "Start";
+    if(startButton.getElementsByTagName("p")[0].innerHTML == "Stop"){
+      startButton.getElementsByTagName("p")[0].innerHTML = "Start";
+      startButton.getElementsByTagName("img")[0].src = "assets/play.jpg";
         stopTimer();
         return;
     }
@@ -145,7 +147,8 @@ function resetTimer(){
     player2Name.innerHTML = 'Player B';
     document.getElementById('playerA').style.backgroundColor = 'green';
     document.getElementById('playerB').style.backgroundColor = 'green';
-    startButton.innerHTML = "Start";
+    startButton.getElementsByTagName("p")[0].innerHTML = "Start";
+    startButton.getElementsByTagName("img")[0].src = "assets/play.jpg";
     stopTimer();
     return;
 
