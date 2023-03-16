@@ -141,7 +141,7 @@ function resetTimer(){
     player2Name.innerHTML = 'Player B';
     document.getElementById('playerA').style.backgroundColor = 'green';
     document.getElementById('playerB').style.backgroundColor = 'green';
-    startButton.innerHTML = "Play";
+    startButton.innerHTML = "Start";
     stopTimer();
     return;
 
