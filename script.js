@@ -87,8 +87,9 @@ function stopTimer() {
 
 function extendPlayerA() {
   if (playerAUsed) return; // Only use once
-  timeLeft += playerATime;
+  timeLeft += playerATime;  
   playerAUsed = true;
+  timerDisplay.innerHTML = timeLeft;
   playerAButton.classList.add('used');
   playerAButton.style.backgroundColor = 'red';
 
@@ -98,6 +99,7 @@ function extendPlayerB() {
   if (playerBUsed) return; // Only use once
   timeLeft += playerBTime;
   playerBUsed = true;
+  timerDisplay.innerHTML = timeLeft;
   playerBButton.classList.add('used');
   playerBButton.style.backgroundColor = 'red';
 }
@@ -134,6 +136,8 @@ function resetTimer(){
     timeLeft = 45;
     player1Score = 0;
     player2Score = 0;
+    playerAUsed = false;
+    playerBUsed = false;
     timerDisplay.innerHTML = '45';
     player1ScoreDisplay.innerHTML = 0;
     player2ScoreDisplay.innerHTML = 0;
