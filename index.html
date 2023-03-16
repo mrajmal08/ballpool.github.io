@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Verdana' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+    <title>8 BALL POOL TIMER</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="font-family: 'Verdana', sans-serif;">
+    <h1 class="mainHeading">8 BALL POOL TIMER</h1>
+    <div class="container">
+    <div class="mainSection">
+        <div class="firstPlayerBox">
+            <img class="playerLogo" src="assets/logo.jpeg" alt="logo"/>
+            <h3 contenteditable="true" id="player1Name">Player A</h3>
+            <div id="playerA" class="extensionBtn"><p>15 Second Extension</p></div>
+            <div>
+                <p class="scoreHeading">Score</p>
+                <div class="scoreTitle"><p id="player1Score">0</p></div>
+            </div>
+            <div class="actionsBtns">
+                <div class="addBtns"><p id="player1Minus">-</p></div>
+                <div class="lessBtns"><p id="player1Plus">+</p></div>
+                
+                <div class="resetBtns">
+                    <img class="resetImg" src="assets/replay.png" alt=""/>
+                    <p id="resetA">Reset</p>
+                </div>
+                <div ></div>
+            </div>
+            
+        </div>
+        <div class="scoreBox">
+            
+            <div class="scoreShow"><h1 id="timer">45</h1></div>
+            <div class="timerActionsContainer">
+            <div class="resetTimerBtn"><p id="resetTime">Reset</p></div>  
+<!--
+            <div class="resetAllBtn">
+                <p>Start</p>
+            </div>
+-->
+            <div class="timerActionBtns">
+                <p id="startButton">Start</p>
+                <img src="assets/replay.png" alt=""/>
+            </div>
+                </div>
+            
+        </div>
+        <div class="secondPlayerBox">
+            <img class="playerLogo" src="assets/logo.jpeg" alt="logo"/>
+            <h3 contenteditable="true" id="player2Name">Player B</h3>
+            <div id="playerB" class="extensionBtn"><p>15 Second Extension</p></div>
+            <div>
+                <p class="scoreHeading">Score</p>
+                <div class="scoreTitle"><p id="player2Score">0</p></div>
+            </div>
+            <div class="actionsBtns">
+                <div class="addBtns"><p id="player2Minus">-</p></div>
+                <div class="lessBtns"><p id="player2Plus">+</p></div>
+                
+                <div class="resetBtns">
+                    <img class="resetImg" src="assets/replay.png" alt=""/>
+                    <p id="resetB">Reset</p>
+                </div>
+                <div ></div>
+            </div>
+        </div>        
+    </div>
+        </div>
+<!--    <p class="ownerTitle">Designed by Ray Dean</p>-->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
