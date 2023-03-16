@@ -57,6 +57,9 @@ resetButtonB.addEventListener('click', resetScoresB);
 function startTimer() {
   if (countdown) return; // Don't start if already running
   countdown = setInterval(() => {
+    if(timeLeft == 0){
+      timeLeft = 46;
+    }
     timeLeft--;
     if(timeLeft == 5){
       timerDisplay.innerHTML = '5';
@@ -70,7 +73,8 @@ function startTimer() {
       timeLeft = 0;
       timerDisplay.innerHTML = '0';
       timerDisplay.classList.add('times-up');
-      // playBuzzer();
+      startButton.getElementsByTagName("p")[0].innerHTML = "Start";
+      startButton.getElementsByTagName("img")[0].src = "assets/play.jpg";
       return;
     }
     timerDisplay.innerHTML = timeLeft;
