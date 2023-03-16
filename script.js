@@ -68,7 +68,7 @@ function startTimer() {
       clearInterval(countdown);
       countdown = null;
       timeLeft = 0;
-      timerDisplay.innerHTML = 'Time\'s Up!';
+      timerDisplay.innerHTML = '0';
       timerDisplay.classList.add('times-up');
       // playBuzzer();
       return;
