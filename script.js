@@ -23,6 +23,7 @@ const resetButtonA = document.getElementById('resetA');
 const resetButtonB = document.getElementById('resetB');
 const player1Name = document.getElementById('player1Name');
 const player2Name = document.getElementById('player2Name');
+const ResetExtension = document.getElementById('ResetExtension');
 
 
 resetTimerBtn.addEventListener('click', resetTimer);
@@ -52,6 +53,7 @@ player2PlusButton.addEventListener('click', () => updateScore('player2', 1));
 player2MinusButton.addEventListener('click', () => updateScore('player2', -1));
 resetButtonA.addEventListener('click', resetScoresA);
 resetButtonB.addEventListener('click', resetScoresB);
+ResetExtension.addEventListener('click', resetExtension);
 
 
 function startTimer() {
@@ -123,6 +125,13 @@ function updateScore(player, delta) {
     player2Score += delta;
     player2ScoreDisplay.innerHTML = player2Score;
   }
+}
+
+function resetExtension(){
+  playerAUsed = false;
+  playerBUsed = false;
+  document.getElementById('playerA').style.backgroundColor = 'green';
+  document.getElementById('playerB').style.backgroundColor = 'green';
 }
 
 function resetScoresA() {

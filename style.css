@@ -10,10 +10,10 @@ body {
 
 .mainHeading {
     margin-top: 3%;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     font-size: 44px;
     color: orange;
-    word-spacing: 10px;
+/*    word-spacing: 10px;*/
     text-align: center;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .playerLogo{
-    width: 120px;
+    width: 145px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -138,10 +138,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 64px;
-    font-weight: 700;
-    height: 240px;
-    width: 240px;
+    font-size: 94px;
+    font-weight: 900;
+    height: 220px;
+    width: 220px;
 }
 
 .timerActionsContainer{
@@ -150,6 +150,17 @@ body {
     flex-direction: column;
 /*    : 20px*/
 }
+/*
+.resetFramBtn {
+    width: 140px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: grey;
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+}
+*/
 
 .resetTimerBtn {
     width: 140px;
@@ -169,7 +180,7 @@ body {
 }
 
 
-.timerActionBtns, .resetAllBtn {
+.timerActionBtns, .resetAllBtn, .resetFramBtn {
     display: flex;
     flex-direction: row;
     border-radius: 4px;
@@ -181,10 +192,17 @@ body {
     align-items: center;
     cursor: pointer;
 }
-.timerActionBtns p, .resetAllBtn p {
+.resetFramBtn{
+    
+    background-color: #7f7f7f;
+}
+.timerActionBtns p, .resetAllBtn p, .resetFramBtn p {
     margin: 0px;
 }
-.timerActionBtns img {
+.resetFramBtn p {
+    color: white;
+}
+.timerActionBtns img, .resetFramBtn img {
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -216,6 +234,11 @@ body {
 }
 
 @media all and (max-width: 772px) {
+    
+    .playerLogo{
+        width: 120px;
+    }
+    
     .secondPlayerBox{
         align-items: flex-start;
     }
@@ -249,12 +272,19 @@ body {
     .scoreShow h1{
         height: 140px;
         width: 140px;
+        font-size: 66px;
     }
-   .timerActionBtns {
+   .timerActionBtns, .resetFramBtn {
     width: 130px; 
+    }
+    
+    .resetFramBtn {
+    width: 140px; 
     }
     .resetTimerBtn {
     width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     }
 }
 
